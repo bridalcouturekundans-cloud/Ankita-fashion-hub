@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ankita Fashion Hub | Online Shopping</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff8f5;
+  color: #35202a;
+}
+
+header {
+  background: #781c45;
+  color: white;
+  padding: 22px 12px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: Georgia, serif;
+  font-size: 30px;
+}
+
+header p {
+  margin-top: 8px;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+nav {
+  background: #4f102c;
+  padding: 13px 5px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 9px;
+  font-size: 14px;
+}
+
+.hero {
+  padding: 55px 18px;
+  text-align: center;
+  background: linear-gradient(135deg, #f8dce6, #fff1e3);
+}
+
+.hero h2 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  color: #781c45;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.btn {
+  display: inline-block;
+  background: #781c45;
+  color: white;
+  text-decoration: none;
+  padding: 13px 22px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.section {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.section h2 {
+  color: #781c45;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: #705b64;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px #00000012;
+  padding-bottom: 18px;
+}
+
+.card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  background: #f3e2e7;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 13px 5px 8px;
+}
+
+.price {
+  color: #781c45;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.order {
+  background: #168348;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 22px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.about {
+  background: #f7e5eb;
+  padding: 38px 20px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.about h2 {
+  color: #781c45;
+  font-family: Georgia, serif;
+  margin-bottom: 15px;
+}
+
+.contact {
+  background: #781c45;
+  color: white;
+  text-align: center;
+  padding: 40px 18px;
+}
+
+.contact h2 {
+  font-family: Georgia, serif;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.contact .btn {
+  background: white;
+  color: #781c45;
+}
+
+footer {
+  background: #35101f;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+@media (min-width: 700px) {
+  .products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .card img {
+    height: 300px;
+  }
+
+  .hero h2 {
+    font-size: 48px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>👑 Ankita Fashion Hub</h1>
+  <p>ETHNIC WEAR • BRIDAL COLLECTION</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#products">Collections</a>
+  <a href="#about">About Us</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+  <h2>Elegance in Every Outfit</h2>
+  <p>
+    Discover beautiful Lehengas, Suits and Ethnic Dresses.
+    Make every special occasion unforgettable with Ankita Fashion Hub.
+  </p>
+  <a href="#products" class="btn">Explore Collection ✨</a>
+</section>
+
+<section class="section" id="products">
+  <h2>Our Collection</h2>
+  <p class="subtitle">
+    Discover your favourite ethnic fashion styles.
+  </p>
+
+  <div class="products">
+
+    <div class="card">
+      <img
+        src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80"
+        alt="Bridal fashion"
+        loading="lazy">
+      <h3>Royal Bridal Lehenga</h3>
+      <p class="price">₹3,499</p>
+      <button class="order" onclick="orderProduct('Royal Bridal Lehenga',3499)">
+        Order on WhatsApp
+      </button>
+    </div>
+
+    <div class="card">
+      <img
+        src="https://images.unsplash.com/photo-1583391733956-6c78276477e8?auto=format&fit=crop&w=600&q=80"
+        alt="Ethnic fashion"
+        loading="lazy">
+      <h3>Elegant Ethnic Suit</h3>
+      <p class="price">₹1,499</p>
+      <button class="order" onclick="orderProduct('Elegant Ethnic Suit',1499)">
+        Order on WhatsApp
+      </button>
+    </div>
+
+    <div class="card">
+      <img
+        src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80"
+        alt="Fashion collection"
+        loading="lazy">
+      <h3>Festive Collection</h3>
+      <p class="price">₹2,199</p>
+      <button class="order" onclick="orderProduct('Festive Collection',2199)">
+        Order on WhatsApp
+      </button>
+    </div>
+
+    <div class="card">
+      <img
+        src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80"
+        alt="Women's outfit"
+        loading="lazy">
+      <h3>Designer Suit</h3>
+      <p class="price">₹1,099</p>
+      <button class="order" onclick="orderProduct('Designer Suit',1099)">
+        Order on WhatsApp
+      </button>
+    </div>
+
+    <div class="card">
+      <img
+        src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80"
+        alt="Traditional wear"
+        loading="lazy">
+      <h3>Premium Traditional Wear</h3>
+      <p class="price">₹2,799</p>
+      <button class="order" onclick="orderProduct('Premium Traditional Wear',2799)">
+        Order on WhatsApp
+      </button>
+    </div>
+
+    <div class="card">
+      <img
+        src="https://images.unsplash.com/photo-1583391733956-6c78276477e8?auto=format&fit=crop&w=600&q=80"
+        alt="Festive outfit"
+        loading="lazy">
+      <h3>Party Wear Collection</h3>
+      <p class="price">₹1,899</p>
+      <button class="order" onclick="orderProduct('Party Wear Collection',1899)">
+        Order on WhatsApp
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>About Ankita Fashion Hub</h2>
+  <p>
+    Welcome to Ankita Fashion Hub!
+    Explore beautiful ethnic wear for weddings, festivals
+    and special occasions. Our goal is to help you find
+    your favourite style with an easy ordering experience.
+  </p>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Want to Place an Order? 💖</h2>
+  <p>
+    Contact us on WhatsApp for product availability,
+    sizes, delivery information and ordering assistance.
+  </p>
+  <button class="btn" onclick="contactUs()">
+    Contact Us on WhatsApp
+  </button>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> Ankita Fashion Hub</p>
+  <p>Fashion • Tradition • Elegance</p>
+</footer>
+
+<script>
+/*
+IMPORTANT:
+Replace 91XXXXXXXXXX with your WhatsApp number.
+Example format: 919876543210
+Use your own number, including country code 91.
+Do not add + or spaces.
+*/
+
+const WHATSAPP_NUMBER = "919057983283";
+
+function openWhatsApp(message) {
+  if (WHATSAPP_NUMBER.includes("X")) {
+    alert(
+      "Please add your WhatsApp number in the website code first."
+    );
+    return;
+  }
+
+  const url =
+    "https://wa.me/" +
+    WHATSAPP_NUMBER +
+    "?text=" +
+    encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+
+function orderProduct(name, price) {
+  const message =
+    "Hello Ankita Fashion Hub! I want to order:\n\n" +
+    "Product: " + name + "\n" +
+    "Price: ₹" + price.toLocaleString("en-IN") + "\n\n" +
+    "Please confirm availability, size, delivery charges and payment details.";
+
+  openWhatsApp(message);
+}
+
+function contactUs() {
+  openWhatsApp(
+    "Hello Ankita Fashion Hub! Please share your latest collection and ordering details."
+  );
+}
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
