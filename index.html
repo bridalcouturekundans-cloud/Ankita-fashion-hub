@@ -4,425 +4,1355 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ankita Fashion Hub</title>
+<title>Ankita Fashion Hub | Premium Ethnic Wear</title>
+
+<meta name="description" content="Shop beautiful lehengas, suits, sarees and dresses at Ankita Fashion Hub. Discover elegant ethnic fashion at affordable prices.">
 
 <style>
+:root {
+  --primary: #8b1748;
+  --dark: #27121d;
+  --gold: #d4a44c;
+  --light: #fff8f5;
+  --white: #ffffff;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #fff8fb;
-    color: #333;
+  font-family: Arial, sans-serif;
+  color: var(--dark);
+  background: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.announcement {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 header {
-    background: #a00055;
-    color: white;
-    text-align: center;
-    padding: 25px 10px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px #0000000d;
 }
 
-header h1 {
-    font-size: 30px;
-    margin-bottom: 8px;
+.navbar {
+  max-width: 1250px;
+  margin: auto;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
 }
 
-header p {
-    font-size: 15px;
+.logo {
+  color: var(--primary);
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: bold;
 }
 
-nav {
-    background: #72003c;
-    text-align: center;
-    padding: 13px;
+.logo small {
+  display: block;
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-top: 4px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 12px;
-    font-weight: bold;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 13px;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.cart-button {
+  background: var(--primary);
+  color: white;
+  padding: 11px 15px;
+  border: none;
+  border-radius: 4px;
 }
 
 .hero {
-    text-align: center;
-    padding: 35px 15px;
-    background: #ffe0ed;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(25,8,17,.85), rgba(25,8,17,.15)),
+    url("https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+  color: white;
 }
 
-.hero h2 {
-    color: #a00055;
-    font-size: 27px;
-    margin-bottom: 12px;
+.hero-content {
+  width: 1250px;
+  max-width: 100%;
+  margin: auto;
+  padding: 45px 25px;
+}
+
+.eyebrow {
+  color: #f3d48e;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 6vw, 70px);
+  line-height: 1.12;
+  margin: 22px 0;
+  max-width: 650px;
 }
 
 .hero p {
-    margin-bottom: 18px;
+  max-width: 460px;
+  line-height: 1.8;
+  font-size: 15px;
 }
 
-.button {
-    display: inline-block;
-    background: #a00055;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
+.primary-button {
+  display: inline-block;
+  background: var(--gold);
+  color: #24121b;
+  border: none;
+  padding: 15px 25px;
+  margin-top: 25px;
+  font-weight: bold;
+  border-radius: 3px;
 }
 
-.section-title {
-    text-align: center;
-    color: #a00055;
-    margin: 30px 10px 20px;
-    font-size: 26px;
+.primary-button:hover {
+  background: white;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--light);
+  padding: 24px 15px;
+  text-align: center;
+  gap: 15px;
+}
+
+.benefits strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.benefits span {
+  font-size: 11px;
+  color: #786b71;
+}
+
+.section {
+  max-width: 1250px;
+  margin: auto;
+  padding: 65px 20px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-heading span {
+  color: var(--primary);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 4vw, 40px);
+  margin-top: 12px;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.category {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  background: #f4e7eb;
+}
+
+.category img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+
+.category:hover img {
+  transform: scale(1.07);
+}
+
+.category-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 35px 10px 20px;
+  background: linear-gradient(transparent, #190711d9);
+}
+
+.category-label h3 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+}
+
+.category-label button {
+  border: 1px solid white;
+  color: white;
+  background: transparent;
+  padding: 7px 13px;
+  margin-top: 10px;
+}
+
+.shop-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.search-box, .sort-select {
+  padding: 12px;
+  border: 1px solid #e5d8de;
+  border-radius: 4px;
+  background: white;
+}
+
+.search-box {
+  min-width: 220px;
+  flex: 1;
+  max-width: 400px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.filter-btn {
+  border: 1px solid #e8d5de;
+  padding: 9px 15px;
+  border-radius: 30px;
+  background: white;
+  color: var(--dark);
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
 }
 
 .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 15px;
-    max-width: 1200px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
 }
 
-.product {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 3px 12px #00000015;
-    padding-bottom: 18px;
-    text-align: center;
+.product-card {
+  border: 1px solid #f0e6ea;
+  background: white;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
-.product img {
-    width: 100%;
-    height: 270px;
-    object-fit: cover;
-    background: #f5e5ed;
+.product-image {
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  background: #f7edf0;
 }
 
-.product h3 {
-    margin: 14px 5px 8px;
-    color: #72003c;
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--primary);
+  color: white;
+  padding: 6px 9px;
+  font-size: 10px;
+  border-radius: 2px;
+}
+
+.wishlist {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 34px;
+  height: 34px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-info h3 {
+  font-size: 14px;
+  margin-bottom: 9px;
+  line-height: 1.5;
+}
+
+.rating {
+  color: #bd8a28;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 
 .price {
-    color: #a00055;
-    font-size: 21px;
-    font-weight: bold;
-    margin: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  color: var(--primary);
 }
 
-.size-label {
-    display: block;
-    margin: 12px 0 6px;
-    font-weight: bold;
+.old-price {
+  font-size: 12px;
+  color: #95868d;
+  text-decoration: line-through;
+  margin-left: 6px;
+  font-weight: normal;
 }
 
-.size-select {
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #a00055;
-    border-radius: 5px;
-    background: white;
-    font-size: 15px;
+.product-info select {
+  width: 100%;
+  margin-top: 12px;
+  padding: 9px;
+  border: 1px solid #e5d8de;
+  background: white;
 }
 
-.order-button {
-    display: block;
-    width: 80%;
-    margin: 14px auto 0;
-    padding: 12px;
-    background: #128c45;
-    color: white;
-    text-decoration: none;
-    border: none;
-    border-radius: 6px;
-    font-size: 15px;
-    cursor: pointer;
+.add-cart {
+  width: 100%;
+  background: var(--dark);
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 10px;
 }
 
-.about, .contact {
-    text-align: center;
-    padding: 30px 18px;
-    line-height: 1.8;
+.add-cart:hover {
+  background: var(--primary);
+}
+
+.promo {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 65px 20px;
+}
+
+.promo h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 15px 0;
+}
+
+.promo p {
+  line-height: 1.8;
+}
+
+.promo .primary-button {
+  background: white;
 }
 
 .about {
-    background: #ffe0ed;
-    margin-top: 25px;
+  background: var(--light);
+  text-align: center;
+  padding: 65px 20px;
 }
 
-.contact h2, .about h2 {
-    color: #a00055;
-    margin-bottom: 12px;
+.about p {
+  max-width: 750px;
+  margin: 20px auto 0;
+  color: #75646c;
+  line-height: 1.9;
+}
+
+.newsletter {
+  text-align: center;
+  padding: 55px 20px;
+}
+
+.newsletter form {
+  display: flex;
+  max-width: 450px;
+  margin: 20px auto 0;
+  gap: 8px;
+}
+
+.newsletter input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #e5d8de;
+}
+
+.newsletter button {
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 12px 18px;
 }
 
 footer {
-    background: #72003c;
-    color: white;
-    text-align: center;
-    padding: 18px 10px;
-    margin-top: 20px;
+  background: var(--dark);
+  color: white;
+  padding: 45px 20px 20px;
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+footer h3 {
+  color: #f1ce82;
+  margin-bottom: 17px;
+  font-family: Georgia, serif;
+}
+
+footer p, footer a {
+  display: block;
+  color: #e0d3da;
+  font-size: 13px;
+  line-height: 2;
+}
+
+footer a:hover {
+  color: white;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 35px;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff20;
+  color: #c8b5bf;
+  font-size: 12px;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 150;
+  background: #25d366;
+  color: white;
+  padding: 15px 18px;
+  border-radius: 40px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px #0002;
+}
+
+.cart-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0008;
+  z-index: 200;
+}
+
+.cart-overlay.open {
+  display: block;
+}
+
+.cart-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: min(420px, 100%);
+  height: 100%;
+  background: white;
+  padding: 22px;
+  overflow-y: auto;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.close-cart {
+  background: none;
+  border: none;
+  font-size: 28px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.cart-item button {
+  margin-left: 8px;
+  border: none;
+  background: none;
+  color: var(--primary);
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 19px;
+  margin: 25px 0;
+}
+
+.checkout-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: var(--primary);
+  color: white;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 35px 0;
+  color: #8a7881;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 80px;
+  transform: translateX(-50%);
+  background: var(--dark);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  display: none;
+  z-index: 300;
+  font-size: 13px;
+}
+
+.toast.show {
+  display: block;
+}
+
+@media(max-width: 900px) {
+  .products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-image {
+    height: 250px;
+  }
+}
+
+@media(max-width: 600px) {
+  .navbar {
+    padding: 14px 12px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+    font-size: 12px;
+  }
+
+  .cart-button {
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 460px;
+    background-position: 58% center;
+  }
+
+  .hero-content {
+    padding: 30px 20px;
+  }
+
+  .benefits {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 25px;
+  }
+
+  .section {
+    padding: 45px 12px;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .product-image {
+    height: 220px;
+  }
+
+  .product-info {
+    padding: 10px;
+  }
+
+  .product-info h3 {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .categories {
+    gap: 10px;
+  }
+
+  .category {
+    height: 210px;
+  }
+
+  .shop-toolbar {
+    align-items: stretch;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+
+  .sort-select {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 15px;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+  }
+
+  .whatsapp {
+    right: 12px;
+    bottom: 12px;
+    padding: 12px 15px;
+    font-size: 12px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>✨ Ankita Fashion Hub ✨</h1>
-    <p>Your Fashion, Your Style ❤️</p>
-    <p>Beautiful Dresses at Affordable Prices</p>
-</header>
-
-<nav>
-    <a href="#home">Home</a>
-    <a href="#collection">Collection</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section class="hero" id="home">
-    <h2>Welcome to Ankita Fashion Hub</h2>
-    <p>Explore beautiful dresses and choose your favourite style.</p>
-    <a href="#collection" class="button">Shop Now 🛍️</a>
-</section>
-
-<h2 class="section-title" id="collection">Our Dress Collection ❤️</h2>
-
-<div class="products">
-
-    <!-- DRESS 1 -->
-    <div class="product">
-        <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80"
-             alt="Traditional Fashion Dress">
-
-        <h3>Traditional Dress 1</h3>
-        <p class="price">₹1,100</p>
-
-        <label class="size-label" for="size1">Select Size:</label>
-        <select class="size-select" id="size1">
-            <option value="">Choose Size</option>
-            <option>XS</option>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-            <option>XXL</option>
-            <option>XXXL</option>
-            <option>Free Size</option>
-        </select>
-
-        <button class="order-button"
-            onclick="orderDress('Traditional Dress 1', 1100, 'size1')">
-            Order on WhatsApp
-        </button>
-    </div>
-
-    <!-- DRESS 2 -->
-    <div class="product">
-        <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e4?auto=format&fit=crop&w=600&q=80"
-             alt="Designer Fashion Dress">
-
-        <h3>Designer Dress 2</h3>
-        <p class="price">₹1,500</p>
-
-        <label class="size-label" for="size2">Select Size:</label>
-        <select class="size-select" id="size2">
-            <option value="">Choose Size</option>
-            <option>XS</option>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-            <option>XXL</option>
-            <option>XXXL</option>
-            <option>Free Size</option>
-        </select>
-
-        <button class="order-button"
-            onclick="orderDress('Designer Dress 2', 1500, 'size2')">
-            Order on WhatsApp
-        </button>
-    </div>
-
-    <!-- DRESS 3 -->
-    <div class="product">
-        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80"
-             alt="Party Wear Dress">
-
-        <h3>Party Wear Dress 3</h3>
-        <p class="price">₹1,700</p>
-
-        <label class="size-label" for="size3">Select Size:</label>
-        <select class="size-select" id="size3">
-            <option value="">Choose Size</option>
-            <option>XS</option>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-            <option>XXL</option>
-            <option>XXXL</option>
-            <option>Free Size</option>
-        </select>
-
-        <button class="order-button"
-            onclick="orderDress('Party Wear Dress 3', 1700, 'size3')">
-            Order on WhatsApp
-        </button>
-    </div>
-
-    <!-- DRESS 4 -->
-    <div class="product">
-        <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80"
-             alt="Elegant Fashion Dress">
-
-        <h3>Elegant Dress 4</h3>
-        <p class="price">₹2,100</p>
-
-        <label class="size-label" for="size4">Select Size:</label>
-        <select class="size-select" id="size4">
-            <option value="">Choose Size</option>
-            <option>XS</option>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-            <option>XXL</option>
-            <option>XXXL</option>
-            <option>Free Size</option>
-        </select>
-
-        <button class="order-button"
-            onclick="orderDress('Elegant Dress 4', 2100, 'size4')">
-            Order on WhatsApp
-        </button>
-    </div>
-
-    <!-- DRESS 5 -->
-    <div class="product">
-        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=600&q=80"
-             alt="Stylish Fashion Dress">
-
-        <h3>Stylish Dress 5</h3>
-        <p class="price">₹1,300</p>
-
-        <label class="size-label" for="size5">Select Size:</label>
-        <select class="size-select" id="size5">
-            <option value="">Choose Size</option>
-            <option>XS</option>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-            <option>XXL</option>
-            <option>XXXL</option>
-            <option>Free Size</option>
-        </select>
-
-        <button class="order-button"
-            onclick="orderDress('Stylish Dress 5', 1300, 'size5')">
-            Order on WhatsApp
-        </button>
-    </div>
-
-    <!-- DRESS 6 -->
-    <div class="product">
-        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80"
-             alt="Latest Fashion Collection">
-
-        <h3>Latest Collection 6</h3>
-        <p class="price">₹1,900</p>
-
-        <label class="size-label" for="size6">Select Size:</label>
-        <select class="size-select" id="size6">
-            <option value="">Choose Size</option>
-            <option>XS</option>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-            <option>XXL</option>
-            <option>XXXL</option>
-            <option>Free Size</option>
-        </select>
-
-        <button class="order-button"
-            onclick="orderDress('Latest Collection 6', 1900, 'size6')">
-            Order on WhatsApp
-        </button>
-    </div>
-
+<div class="announcement">
+  WELCOME TO ANKITA FASHION HUB ✦ ELEGANCE IN EVERY THREAD
 </div>
 
-<section class="about" id="about">
-    <h2>About Ankita Fashion Hub</h2>
+<header>
+  <nav class="navbar">
+    <a class="logo" href="#">
+      ANKITA
+      <small>FASHION HUB</small>
+    </a>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+    </div>
+
+    <button class="cart-button" onclick="openCart()">
+      🛍 Cart (<span id="cart-count">0</span>)
+    </button>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-content">
+    <span class="eyebrow">The Festive Edit</span>
+    <h1>Tradition Meets Timeless Elegance</h1>
     <p>
-        Welcome to Ankita Fashion Hub! ❤️
-        We bring you beautiful and stylish dresses for your special occasions.
-        Choose your favourite dress, select your size and contact us to place
-        your order.
+      Discover beautiful ethnic wear designed to make every
+      celebration unforgettable. Find your perfect look at
+      Ankita Fashion Hub.
     </p>
+    <a href="#shop" class="primary-button">SHOP COLLECTION</a>
+  </div>
 </section>
 
-<section class="contact" id="contact">
-    <h2>Contact Us 📞</h2>
-    <p>For orders and enquiries, contact us on WhatsApp.</p>
-    <a class="button"
-       href="https://wa.me/919057983283"
-       target="_blank">
-       Chat on WhatsApp
-    </a>
+<section class="benefits">
+  <div>
+    <strong>✦ PREMIUM COLLECTION</strong>
+    <span>Styles for every celebration</span>
+  </div>
+  <div>
+    <strong>✦ SECURE SHOPPING</strong>
+    <span>Shop with confidence</span>
+  </div>
+  <div>
+    <strong>✦ CUSTOMER SUPPORT</strong>
+    <span>Help with your orders</span>
+  </div>
+  <div>
+    <strong>✦ EASY ORDERING</strong>
+    <span>Convenient shopping experience</span>
+  </div>
 </section>
+
+<section class="section" id="collections">
+  <div class="section-heading">
+    <span>Explore Our World</span>
+    <h2>Shop By Collection</h2>
+  </div>
+
+  <div class="categories">
+    <a href="#shop" class="category" onclick="setCategory('Lehenga')">
+      <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Lehenga collection">
+      <div class="category-label">
+        <h3>Lehengas</h3>
+        <button type="button">Explore</button>
+      </div>
+    </a>
+
+    <a href="#shop" class="category" onclick="setCategory('Suit')">
+      <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e8?auto=format&fit=crop&w=600&q=80" alt="Suit collection">
+      <div class="category-label">
+        <h3>Suit Sets</h3>
+        <button type="button">Explore</button>
+      </div>
+    </a>
+
+    <a href="#shop" class="category" onclick="setCategory('Saree')">
+      <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80" alt="Saree collection">
+      <div class="category-label">
+        <h3>Sarees</h3>
+        <button type="button">Explore</button>
+      </div>
+    </a>
+
+    <a href="#shop" class="category" onclick="setCategory('Dress')">
+      <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80" alt="Dress collection">
+      <div class="category-label">
+        <h3>Party Wear</h3>
+        <button type="button">Explore</button>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="section-heading">
+    <span>Handpicked For You</span>
+    <h2>Our Bestsellers</h2>
+  </div>
+
+  <div class="shop-toolbar">
+    <input
+      id="search"
+      class="search-box"
+      type="search"
+      placeholder="Search lehenga, suit, saree..."
+      aria-label="Search products"
+    >
+
+    <select id="sort" class="sort-select" aria-label="Sort products">
+      <option value="featured">Featured Products</option>
+      <option value="low">Price: Low to High</option>
+      <option value="high">Price: High to Low</option>
+    </select>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" data-category="All">All Products</button>
+    <button class="filter-btn" data-category="Lehenga">Lehengas</button>
+    <button class="filter-btn" data-category="Suit">Suit Sets</button>
+    <button class="filter-btn" data-category="Saree">Sarees</button>
+    <button class="filter-btn" data-category="Dress">Dresses</button>
+  </div>
+
+  <div class="products" id="products"></div>
+</section>
+
+<section class="promo">
+  <span class="eyebrow">A Little Something Special</span>
+  <h2>Celebrate Your Style</h2>
+  <p>Explore our collection and find an outfit that feels uniquely you.</p>
+  <a href="#shop" class="primary-button">DISCOVER YOUR LOOK</a>
+</section>
+
+<section class="about" id="about">
+  <div class="section-heading">
+    <span>Our Story</span>
+    <h2>Welcome to Ankita Fashion Hub</h2>
+  </div>
+
+  <p>
+    At Ankita Fashion Hub, we believe every outfit tells a story.
+    Our collection celebrates the beauty of Indian ethnic fashion,
+    from festive lehengas and graceful sarees to elegant suit sets
+    and contemporary party wear. Our goal is to help you find
+    beautiful styles for your special moments.
+  </p>
+</section>
+
+<section class="newsletter">
+  <div class="section-heading">
+    <span>Stay In Style</span>
+    <h2>Join Our Fashion Updates</h2>
+  </div>
+
+  <p>Contact our team to learn about new arrivals and special offers.</p>
+
+  <form id="newsletter-form">
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">JOIN US</button>
+  </form>
+</section>
+
+</main>
 
 <footer>
-    <p>© 2026 Ankita Fashion Hub. All Rights Reserved.</p>
-    <p>Made with ❤️ for Fashion Lovers</p>
+  <div class="footer-grid">
+    <div>
+      <h3>Ankita Fashion Hub</h3>
+      <p>
+        Discover timeless ethnic fashion and beautiful outfits
+        for your special occasions.
+      </p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#shop">Shop All</a>
+      <a href="#about">About Us</a>
+    </div>
+
+    <div>
+      <h3>Customer Care</h3>
+      <a href="#" onclick="showPolicy('Shipping Policy')">Shipping Policy</a>
+      <a href="#" onclick="showPolicy('Return and Exchange Policy')">Returns & Exchanges</a>
+      <a href="#" onclick="showPolicy('Privacy Policy')">Privacy Policy</a>
+      <a href="#" onclick="showPolicy('Terms and Conditions')">Terms & Conditions</a>
+    </div>
+
+    <div>
+      <h3>Get In Touch</h3>
+      <p>WhatsApp customer support</p>
+      <a id="footer-whatsapp" href="#" target="_blank" rel="noopener">Message Us</a>
+      <p>Instagram: Add your profile</p>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © <span id="year"></span> Ankita Fashion Hub. All rights reserved.
+  </div>
 </footer>
+
+<a class="whatsapp" id="whatsapp-button" href="#" target="_blank" rel="noopener">
+  WhatsApp Us
+</a>
+
+<div class="cart-overlay" id="cart-overlay" onclick="overlayClose(event)">
+  <div class="cart-panel">
+    <div class="cart-header">
+      <h2>Your Shopping Bag</h2>
+      <button class="close-cart" onclick="closeCart()" aria-label="Close cart">×</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cart-total">₹0</span>
+    </div>
+
+    <button class="checkout-button" onclick="checkout()">
+      ORDER ON WHATSAPP
+    </button>
+
+    <p style="font-size:11px;color:#887782;margin-top:12px;line-height:1.6">
+      Orders are sent to WhatsApp for confirmation. No online payment
+      is processed by this demo website.
+    </p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
 
 <script>
 /*
-IMPORTANT:
-Replace 91XXXXXXXXXX with your WhatsApp number.
-Use country code and number only.
-Example format: 919876543210
+  IMPORTANT:
+  Replace the sample products and images with your real inventory.
+  Replace the WhatsApp number below with your business number.
+  Use your country code without the + sign.
 */
 
-const WHATSAPP_NUMBER = "919057983283";
+const STORE = {
+  name: "Ankita Fashion Hub",
+  whatsapp: "91XXXXXXXXXX"
+};
 
-function orderDress(productName, price, sizeId) {
-    const size = document.getElementById(sizeId).value;
+const productsData = [
+  {
+    id: 1,
+    name: "Elegant Festive Lehenga",
+    category: "Lehenga",
+    price: 2199,
+    oldPrice: 2999,
+    badge: "POPULAR",
+    rating: "★★★★★",
+    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=650&q=80"
+  },
+  {
+    id: 2,
+    name: "Classic Ethnic Suit Set",
+    category: "Suit",
+    price: 1199,
+    oldPrice: 1599,
+    badge: "BESTSELLER",
+    rating: "★★★★★",
+    image: "https://images.unsplash.com/photo-1583391733956-6c78276477e8?auto=format&fit=crop&w=650&q=80"
+  },
+  {
+    id: 3,
+    name: "Traditional Party Saree",
+    category: "Saree",
+    price: 1499,
+    oldPrice: 1999,
+    badge: "TRENDING",
+    rating: "★★★★☆",
+    image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=650&q=80"
+  },
+  {
+    id: 4,
+    name: "Elegant Party Wear Dress",
+    category: "Dress",
+    price: 1299,
+    oldPrice: 1799,
+    badge: "NEW",
+    rating: "★★★★★",
+    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=650&q=80"
+  },
+  {
+    id: 5,
+    name: "Wedding Special Lehenga",
+    category: "Lehenga",
+    price: 2899,
+    oldPrice: 3599,
+    badge: "SPECIAL",
+    rating: "★★★★★",
+    image: "https://images.unsplash.com/photo-1583391733956-6c78276477e8?auto=format&fit=crop&w=650&q=80"
+  },
+  {
+    id: 6,
+    name: "Graceful Everyday Suit",
+    category: "Suit",
+    price: 899,
+    oldPrice: 1199,
+    badge: "VALUE PICK",
+    rating: "★★★★☆",
+    image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=650&q=80"
+  },
+  {
+    id: 7,
+    name: "Designer Occasion Saree",
+    category: "Saree",
+    price: 1899,
+    oldPrice: 2499,
+    badge: "POPULAR",
+    rating: "★★★★★",
+    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=650&q=80"
+  },
+  {
+    id: 8,
+    name: "Chic Celebration Dress",
+    category: "Dress",
+    price: 1599,
+    oldPrice: 2199,
+    badge: "NEW",
+    rating: "★★★★☆",
+    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=650&q=80"
+  }
+];
 
-    if (size === "") {
-        alert("Please select your dress size first!");
-        return;
-    }
+let activeCategory = "All";
+let cart = [];
 
-if (WHATSAPP_NUMBER === "919057983283") {
-    alert("Website owner: Please add your WhatsApp number in the code first.");
+const rupees = amount =>
+  new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0
+  }).format(amount);
+
+function renderProducts() {
+  const search = document.getElementById("search").value
+    .trim().toLowerCase();
+
+  const sort = document.getElementById("sort").value;
+
+  let list = productsData.filter(product => {
+    const matchesCategory =
+      activeCategory === "All" ||
+      product.category === activeCategory;
+
+    const matchesSearch =
+      product.name.toLowerCase().includes(search) ||
+      product.category.toLowerCase().includes(search);
+
+    return matchesCategory && matchesSearch;
+  });
+
+  if (sort === "low") list.sort((a, b) => a.price - b.price);
+  if (sort === "high") list.sort((a, b) => b.price - a.price);
+
+  const container = document.getElementById("products");
+
+  if (list.length === 0) {
+    container.innerHTML =
+      '<p class="empty-message">No products found. Try another search.</p>';
     return;
-}
-    const message =
-        "Hello Ankita Fashion Hub! I want to order this dress.%0A%0A" +
-        "Product: " + encodeURIComponent(productName) + "%0A" +
-        "Price: ₹" + price + "%0A" +
-        "Selected Size: " + encodeURIComponent(size) + "%0A%0A" +
-        "Please confirm my order.";
+  }
 
-    const whatsappURL =
-        "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + message;
+  container.innerHTML = list.map(product => `
+    <article class="product-card">
+      <div class="product-image">
+        <img
+          src="${product.image}"
+          alt="${product.name}"
+          loading="lazy"
+        >
+        <span class="badge">${product.badge}</span>
+        <button
+          class="wishlist"
+          aria-label="Add ${product.name} to wishlist"
+          onclick="toggleWishlist(this)"
+        >♡</button>
+      </div>
 
-    window.open(whatsappURL, "_blank");
+      <div class="product-info">
+        <h3>${product.name}</h3>
+        <div class="rating">${product.rating}</div>
+
+        <div>
+          <span class="price">${rupees(product.price)}</span>
+          <span class="old-price">${rupees(product.oldPrice)}</span>
+        </div>
+
+        <label for="size-${product.id}"
+          style="display:block;font-size:12px;margin-top:12px">
+          Select size
+        </label>
+
+        <select id="size-${product.id}">
+          <option value="Free Size">Free Size</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+
+        <button
+          class="add-cart"
+          onclick="addToCart(${product.id})"
+        >ADD TO BAG</button>
+      </div>
+    </article>
+  `).join("");
 }
+
+function setCategory(category) {
+  activeCategory = category;
+  document.querySelectorAll(".filter-btn").forEach(button => {
+    button.classList.toggle(
+      "active",
+      button.dataset.category === category
+    );
+  });
+  renderProducts();
+}
+
+document.querySelectorAll(".filter-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    setCategory(button.dataset.category);
+  });
+});
+
+document.getElementById("search").addEventListener("input", renderProducts);
+document.getElementById("sort").addEventListener("change", renderProducts);
+
+function addToCart(id) {
+  const product = productsData.find(item => item.id === id);
+  const size = document.getElementById(`size-${id}`).value;
+
+  const existing = cart.find(item =>
+    item.id === id && item.size === size
+  );
+
+  if (existing) {
+    existing.quantity++;
+  } else {
+    cart.push({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      size,
+      quantity: 1
+    });
+  }
+
+  updateCart();
+  showToast("Product added to your bag!");
+}
+
+function removeFromCart(id, size) {
+  cart = cart.filter(item =>
+    !(item.id === id && item.size === size)
+  );
+  updateCart();
+}
+
+function changeQuantity(id, size, amount) {
+  const item = cart.find(item =>
+    item.id === id && item.size === size
+  );
+
+  if (!item) return;
+
+  item.quantity += amount;
+
+  if (item.quantity <= 0) {
+    removeFromCart(id, size);
+  } else {
+    updateCart();
+  }
+}
+
+function updateCart() {
+  const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+  const total = cart.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
+
+  document.getElementById("cart-count").textContent = count;
+  document.getElementById("cart-total").textContent = rupees(total);
+
+  const container = document.getElementById("cart-items");
+
+  if (cart.length === 0) {
+    container.innerHTML =
+      '<p class="empty-message">Your bag is empty. Explore our collection!</p>';
+    return;
+  }
+
+  container.innerHTML = cart.map(item => `
+    <div class="cart-item">
+      <div>
+        <strong>${item.name}</strong>
+        <p>Size: ${item.size}</p>
+        <p>${rupees(item.price)} each</p>
+
+        <div style="margin-top:8px">
+          <button onclick="changeQuantity(${item.id}, '${item.size}', -1)">−</button>
+          ${item.quantity}
+          <button onclick="changeQuantity(${item.id}, '${item.size}', 1)">+</button>
+          <button onclick="removeFromCart(${item.id}, '${item.size}')">Remove</button>
+        </div>
+      </div>
+
+      <strong>${rupees(item.price * item.quantity)}</strong>
+    </div>
+  `).join("");
+}
+
+function openCart() {
+  document.getElementById("cart-overlay").classList.add("open");
+}
+
+function closeCart() {
+  document.getElementById("cart-overlay").classList.remove("open");
+}
+
+function overlayClose(event) {
+  if (event.target.id === "cart-overlay") closeCart();
+}
+
+function validWhatsAppNumber() {
+  return /^91\d{10}$/.test(STORE.whatsapp);
+}
+
+function checkout() {
+  if (cart.length === 0) {
+    showToast("Please add a product to your bag first.");
+    return;
+  }
+
+  if (!validWhatsAppNumber()) {
+    showToast("Please add your correct WhatsApp business number in the code.");
+    return;
+  }
+
+  const lines = cart.map(item =>
+    `${item.name} | Size: ${item.size} | Qty: ${item.quantity} | ${rupees(item.price * item.quantity)}`
+  );
+
+  const total = cart.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
+
+  const message = [
+    `Hello ${STORE.name}! I would like to place an order:`,
+    "",
+    ...lines,
+    "",
+    `Product total: ${rupees(total)}`,
+    "",
+    "Please confirm availability, delivery charges and payment options."
+  ].join("\n");
+
+  const url =
+    "https://wa.me/" + STORE.whatsapp +
+    "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank", "noopener");
+}
+
+function toggleWishlist(button) {
+  button.textContent = button.textContent === "♡" ? "♥" : "♡";
+}
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  setTimeout(() => toast.classList.remove("show"), 2500);
+}
+
+function showPolicy(title) {
+  event.preventDefault();
+  alert(
+    title + "\n\nPlease publish your actual store policy here before accepting customer orders."
+  );
+}
+
+document.getElementById("newsletter-form").addEventListener("submit", event => {
+  event.preventDefault();
+  showToast("Thank you! Newsletter subscription needs a connected email service.");
+  event.target.reset();
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+if (validWhatsAppNumber()) {
+  const whatsappUrl = "https://wa.me/" + STORE.whatsapp;
+
+  document.getElementById("whatsapp-button").href = whatsappUrl;
+  document.getElementById("footer-whatsapp").href = whatsappUrl;
+} else {
+  document.getElementById("whatsapp-button").href = "#";
+  document.getElementById("whatsapp-button").onclick = event => {
+    event.preventDefault();
+    showToast("Add your business WhatsApp number in the code first.");
+  };
+}
+
+renderProducts();
+updateCart();
 </script>
 
 </body>
