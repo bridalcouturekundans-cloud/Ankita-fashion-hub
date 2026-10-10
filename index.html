@@ -1270,7 +1270,7 @@ function overlayClose(event) {
   if (event.target.id === "cart-overlay") closeCart();
 }
 
-function validWhatsAppNumber() {
+function validWhatsAppNumber(9057983283) {
   return /^91\d{10}$/.test(STORE.whatsapp);
 }
 
@@ -1280,7 +1280,7 @@ function checkout() {
     return;
   }
 
-  if (!validWhatsAppNumber()) {
+  if (!validWhatsAppNumber(9057983283)) {
     showToast("Please add your correct WhatsApp business number in the code.");
     return;
   }
@@ -1338,7 +1338,7 @@ document.getElementById("newsletter-form").addEventListener("submit", event => {
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-if (validWhatsAppNumber()) {
+if (validWhatsAppNumber(9057983283)) {
   const whatsappUrl = "https://wa.me/" + STORE.whatsapp;
 
   document.getElementById("whatsapp-button").href = whatsappUrl;
